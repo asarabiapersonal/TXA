@@ -1,0 +1,7 @@
+class wordInfo{
+public:
+
+private:
+
+
+};
