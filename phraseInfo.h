@@ -3,6 +3,7 @@ using namespace std;
 class phraseInfo : public wordInfo{
 public:
 	phraseInfo();
+	~phraseInfo();
 	phraseInfo(string startWord);
 	phraseInfo(string bef, string startWord);
 	phraseInfo(string bef, string startWord, string aft);
@@ -36,3 +37,32 @@ phraseInfo::phraseInfo(string bef, string startWord){
 	after = new wordInfo();
 }
 
+phraseInfo::phraseInfo(string bef, string startWord, string aft){
+	before = new wordInfo(bef);
+	tWord = new wordInfo(startWord);
+	after = new wordInfo(aft);
+}
+
+phraseInfo::phraseInfo(wordInfo startWord){
+	tWord = new wordInfo(startWord);
+}
+
+phraseInfo::phraseInfo(wordInfo bef, wordInfo startWord){
+	before = new wordInfo(bef);
+	tWord = new wordInfo(startWord);
+}
+
+phraseInfo::phraseInfo(wordInfo bef, wordInfo startWord, wordInfo aft){
+	before = new wordInfo(bef);
+	tWord = new wordInfo(startWord);
+	after = new wordInfo(aft);
+}
+
+phraseInfo::~phraseInfo(){
+	delete before;
+	delete tWord;
+	delete after;
+	before = NULL;
+	tWord = NULL;
+	after = NULL;
+}
