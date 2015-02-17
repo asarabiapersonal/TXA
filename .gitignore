@@ -43,3 +43,9 @@ Temporary Items
 .apdisk
 TXA.vcxproj
 TXA.vcxproj.filters
+*.obj
+*.tlog
+Debug/TXA.log
+Debug/vc120.idb
+Debug/vc120.pdb
+enjoyinglife101.com.tokens
